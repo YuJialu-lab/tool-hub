@@ -1,70 +1,43 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Job Aggregator</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f4f4;
-}
-
-header{
-    background:#2563eb;
-    color:white;
-    padding:15px;
-    text-align:center;
-}
-
-iframe{
-    width:100%;
-    height:90vh;
-    border:none;
-}
-
-#offline{
-    display:none;
-    text-align:center;
-    padding:50px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHSH Tools</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h2>Job Aggregator</h2>
+    <h1>BHSH Tools</h1>
+    <p>Useful online tools in one place</p>
 </header>
 
-<div id="offline">
-    <h2>⚠️ Der Job Aggregator ist momentan nicht erreichbar.</h2>
-    <p>Bitte versuche es in ein paar Minuten erneut.</p>
+<main>
 
-    <a href="https://job-aggregator-web-bhsh.onrender.com/" target="_blank">
-        Direkt öffnen
-    </a>
-</div>
+<section>
+    <h2>Job Aggregator</h2>
+    <p>
+        Search and discover job opportunities from different sources.
+    </p>
 
-<iframe
-    id="frame"
-    src="https://job-aggregator-web-bhsh.onrender.com/">
-</iframe>
+    <iframe 
+        src="https://job-aggregator-web-bhsh.onrender.com/"
+        title="Job Aggregator">
+    </iframe>
 
-<script>
-const iframe = document.getElementById("frame");
+</section>
 
-setTimeout(() => {
-    // Wenn die Seite nach 8 Sekunden nicht geladen ist,
-    // zeigen wir die Meldung.
-    document.getElementById("offline").style.display="block";
-},8000);
+</main>
 
-iframe.onload = () => {
-    document.getElementById("offline").style.display="none";
-};
-</script>
+
+<footer>
+    <a href="legal.html">Legal Notice</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+</footer>
+
 
 </body>
 </html>
