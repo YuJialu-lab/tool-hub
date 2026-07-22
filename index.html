@@ -1,43 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHSH Tools</title>
+    <title>BHSH Tools — Job Aggregator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>BHSH Tools</h1>
-    <p>Useful online tools in one place</p>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BHSH<span>_</span>Tools</a>
+    </nav>
 </header>
 
 <main>
 
-<section>
-    <h2>Job Aggregator</h2>
-    <p>
-        Search and discover job opportunities from different sources.
-    </p>
+    <section class="hero">
+        <div class="hero-eyebrow"><span class="dot"></span>QUELLEN WERDEN LIVE DURCHSUCHT</div>
+        <h1>Ein Suchfeld.<br>Alle Jobbörsen.<span class="cursor">&nbsp;</span></h1>
+        <p class="lede">
+            Der Job Aggregator durchsucht mehrere Stellenportale gleichzeitig
+            und zeigt dir die Treffer gebündelt an einem Ort — ohne zehn Tabs offen zu haben.
+        </p>
+      <!--  <div class="sources">
+            <span class="source-tag">StepStone</span>
+            <span class="source-tag">Indeed</span>
+            <span class="source-tag">LinkedIn</span>
+            <span class="source-tag">Arbeitsagentur</span>
+            <span class="source-tag">Xing</span>
+        </div>
+    -->
+    </section>
 
-    <iframe 
-        src="https://job-aggregator-web-bhsh.onrender.com/"
-        title="Job Aggregator">
-    </iframe>
-
-</section>
+    <section class="tool">
+        <div class="tool-header">
+            <h2>Job Aggregator</h2>
+            <p>Suche starten und Ergebnisse aus allen Quellen durchsuchen.</p>
+        </div>
+        <div class="terminal">
+            <div class="terminal-bar">
+                <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
+                <span class="terminal-title">job-aggregator-web-bhsh.onrender.com</span>
+            </div>
+            <iframe
+                src="https://job-aggregator-web-bhsh.onrender.com/"
+                title="Job Aggregator">
+            </iframe>
+        </div>
+    </section>
 
 </main>
 
-
 <footer>
-    <a href="legal.html">Legal Notice</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutzerklärung</a>
+    <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
 </footer>
 
+<div id="cookie-banner">
+    <p>
+        Diese Website verwendet Cookies und ähnliche Technologien für Werbung und Analyse.
+        Weitere Informationen finden Sie in der
+        <a href="datenschutz.html">Datenschutzerklärung</a>.
+    </p>
+    <div>
+        <button onclick="acceptCookies()">Akzeptieren</button>
+        <button onclick="rejectCookies()">Ablehnen</button>
+    </div>
+</div>
+
+<script>
+function acceptCookies(){
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+}
+function rejectCookies(){
+    localStorage.setItem("cookiesAccepted", "false");
+    document.getElementById("cookie-banner").style.display = "none";
+}
+if(localStorage.getItem("cookiesAccepted") !== null){
+    document.getElementById("cookie-banner").style.display = "none";
+}
+</script>
 
 </body>
 </html>
