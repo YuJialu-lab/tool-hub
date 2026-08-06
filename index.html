@@ -76,31 +76,7 @@ Nutze AI Job Aggregator direkt im Browser und analysiere Stellenangebote mit nur
     <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
 </footer>
 
-<div id="cookie-banner">
-    <p>
-        Diese Website verwendet Cookies und ähnliche Technologien für Werbung und Analyse.
-        Weitere Informationen finden Sie in der
-        <a href="datenschutz.html">Datenschutzerklärung</a>.
-    </p>
-    <div>
-        <button onclick="acceptCookies()">Akzeptieren</button>
-        <button onclick="rejectCookies()">Ablehnen</button>
-    </div>
-</div>
 
-<script>
-function acceptCookies(){
-    localStorage.setItem("cookiesAccepted", "true");
-    document.getElementById("cookie-banner").style.display = "none";
-}
-function rejectCookies(){
-    localStorage.setItem("cookiesAccepted", "false");
-    document.getElementById("cookie-banner").style.display = "none";
-}
-if(localStorage.getItem("cookiesAccepted") !== null){
-    document.getElementById("cookie-banner").style.display = "none";
-}
-</script>
 
 </body>
 </html>
